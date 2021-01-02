@@ -3,8 +3,7 @@ package com.company;
 public class Account {
 
 
-    int number;
-
+    private int number;
     private double balance;
     private String customerName;
     private String customerEmailAddress;
@@ -55,21 +54,27 @@ public class Account {
     }
 
     public void deposit(double amount) {
+        if (amount > 0) {
 
-        balance += amount;
-        System.out.println("Funds contributed: " + getBalance());
+            balance += amount;
+            System.out.println("Funds contributed: " + getBalance());
 
+        }
     }
 
-    public void withdrawal(double amount) {
+    public double withdrawal(double amount) {
 
 
         balance -= amount;
-        if (balance >= 0) {
-            System.out.println("Balance: " + getBalance());
-        } else {
+        if (balance  < 0) {
             System.out.println("Balance Insufficient funds.");
+            return 0;
+        } else {
+            System.out.println("Balance: " + getBalance());
+
         }
+        return balance;
+
 
     }
 }

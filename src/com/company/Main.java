@@ -10,10 +10,10 @@ public class Main {
         account1.setCustomerPhoneNumber("+3805032145");
         System.out.println("Number account: " + account1.getNumber());
         System.out.println("Customer name: " + account1.getCustomerName());
-        System.out.println("Customer email Adress: " + account1.getCustomerEmailAddress());
+        System.out.println("Customer email Address: " + account1.getCustomerEmailAddress());
         System.out.println("Customer phone Number: " + account1.getCustomerPhoneNumber());
-        account1.deposit(200);
-        account1.withdrawal(200);
+        account1.deposit(-200);
+        account1.withdrawal(500);
         System.out.println("***************************");
         System.out.println();
 
@@ -24,9 +24,9 @@ public class Main {
         account2.setCustomerPhoneNumber("+678654321");
         System.out.println("Number account: " + account2.getNumber());
         System.out.println("Customer name: " + account2.getCustomerName());
-        System.out.println("Customer email Adress: " + account2.getCustomerEmailAddress());
+        System.out.println("Customer email Address: " + account2.getCustomerEmailAddress());
         System.out.println("Customer phone Number: " + account2.getCustomerPhoneNumber());
-        account2.deposit(1000000);
+        account2.deposit(1000);
         account2.withdrawal(1000);
     }
 }
